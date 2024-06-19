@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  width: 100vw;
+}
+
+.profile-container {
+  width: 100%;
+  background: linear-gradient(160deg, #0369a1 50%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+}
+
+.profile-img-container {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.profile-name {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.about-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-container > .social-links {
+  flex: 1;
+  align-self: flex-end;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project > img {
+  width: 100%;
+  height: auto;
+}
+
+.project-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #0369a1;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.contacts-container {
+  flex: 1;
+}
+
+.contacts-container > h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+.contacts-container > p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.phone-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-image-container {
+  flex: 1;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
