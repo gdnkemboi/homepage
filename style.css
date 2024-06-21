@@ -1,43 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+html,
 body {
   height: 100vh;
-  width: 100vw;
+}
+
+body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-container {
-  width: 100%;
   background: linear-gradient(160deg, #0369a1 50%, transparent 50%);
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 10vw;
 }
 
 .profile {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: center;
-  width: 60vw;
+  padding: 5% 0;
 }
 
 .profile-img-container {
-  flex: 1;
   position: relative;
-  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .profile-img-container img {
-  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-name {
@@ -51,16 +55,33 @@ body {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-size: 2rem;
 }
 
 .about-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: white;
   color: black;
-  padding: 20px;
+  padding: 10%;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-me-title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.about-me-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0, 0.8);
+  font-size: 2rem;
 }
 
 .about-container > .social-links {
@@ -68,32 +89,49 @@ body {
   align-self: flex-end;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
+.profile .icon {
+  width: 40px;
+  height: 40px;
 }
 
 .projects-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  gap: 10px;
+  padding: 10vh 10vw;
 }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 20px;
+  gap: 40px;
+}
+
+.projects-title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 .project {
   display: flex;
   flex-direction: column;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .project > img {
   width: 100%;
   height: auto;
+}
+
+.project-desc-container {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .project-name-container {
@@ -102,45 +140,87 @@ body {
   justify-content: space-between;
 }
 
-.footer {
-  background-color: #0369a1;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 30px;
-}
-
-.contacts-container {
-  flex: 1;
-}
-
-.contacts-container > h3 {
+.project-name {
   font-family: "Playfair Display", serif;
-  font-weight: 700;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
-
 }
 
-.contacts-container > p {
+.project .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.project-desc {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.footer {
+  background-color: #0369a1;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 10vh 10%;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacts-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.contacts-cta,
+.address,
+.phone-display,
+.email-display {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
 .phone-display {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+}
+
+.phone-display > img {
+  width: 35px;
+  height: 35px;
 }
 
 .email-display {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
-.footer-image-container {
-  flex: 1;
+.email-display > img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer .social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.contacts-container .icon {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-image {
@@ -150,4 +230,15 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .about-me-text {
+    font-size: 1.5rem;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
 }
