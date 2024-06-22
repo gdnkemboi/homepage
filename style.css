@@ -296,3 +296,38 @@ a {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 425px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-img-container {
+    box-shadow: none;
+  }
+
+  .about-container {
+    box-shadow: none;
+  }
+
+  .projects {
+    grid-template-columns: auto;
+  }
+
+  .footer {
+    grid-template-columns: auto;
+    padding: 0;
+  }
+
+  .contacts-container {
+    align-items: center;
+    padding: 10%;
+  }
+
+  .contacts-container .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
